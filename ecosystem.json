@@ -1,0 +1,28 @@
+{
+  "apps": [
+    {
+      "name": "vue-shopping",
+      "script": "app.js",
+      "env": {
+        "COMMON_VARIABLE": "true"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    }
+  ],
+  "deploy": {
+    "production": {
+      "user": "imooc_manager",
+      "host": ["139.224.119.134"],
+      "port": "39999",
+      "ref": "origin/master",
+      "repo": "https://github.com/minixu/vue-shopping.git",
+      "path": "/www/vue-shopping/production",
+      "ssh_options": "StrictHostKeyChecking=no",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}
