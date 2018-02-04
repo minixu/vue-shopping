@@ -71,8 +71,8 @@
       <file leaf-file-name="ecosystem.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ecosystem.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="57" lean-forward="false" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+            <state relative-caret-position="225">
+              <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -142,8 +142,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="62" />
-    <option name="y" value="96" />
+    <option name="x" value="180" />
+    <option name="y" value="158" />
     <option name="width" value="1128" />
     <option name="height" value="684" />
   </component>
@@ -220,15 +220,15 @@
       <workItem from="1513476642344" duration="3343000" />
       <workItem from="1513906383046" duration="573000" />
       <workItem from="1515472394863" duration="663000" />
-      <workItem from="1517763027169" duration="168000" />
+      <workItem from="1517763027169" duration="710000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22177000" />
+    <option name="totallyTimeSpent" value="22719000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="62" y="96" width="1128" height="684" extended-state="0" />
+    <frame x="180" y="158" width="1128" height="684" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31914893" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -352,8 +352,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ecosystem.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="57" lean-forward="false" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+        <state relative-caret-position="225">
+          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
           <folding />
         </state>
       </provider>
