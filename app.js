@@ -5,7 +5,7 @@ http.createServer(function(req,res){
     var path = req.url;
     console.log("path1: "+path)
     if(path == "/"){
-        path = "/index.html";
+        path = "/dist/index.html";
     }
     sendFile(res,path);
 }).listen(3001)
