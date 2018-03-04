@@ -8,7 +8,7 @@ http.createServer(function(req,res){
         path = "/dist/index.html";
     }
     sendFile(res,path);
-}).listen(3001)
+}).listen(8082)
 
 function sendFile(res,path){
     var path = process.cwd()+path;
