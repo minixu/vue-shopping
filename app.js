@@ -3,9 +3,6 @@ const path = require('path');
 const express = require('express');
 const app = express();
 
-var apiRoutes = express.Router();
-
-app.use('/api', apiRoutes);
 app.use(express.static(path.resolve(__dirname, './dist')))
 
 app.get('*', function(req, res) {
