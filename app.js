@@ -1,12 +1,9 @@
-const fs = require('fs');
-const path = require('path');
-const express = require('express');
-const app = express();
+const express = require('express')
+const env = process.env.NODE_ENV || 'development'
+const app = express()
 
-app.use(express.static(path.resolve(__dirname, './dist')))
+app.use(express.static('./dist'))
 
-app.get('*', function(req, res) {
-  const html = fs.readFileSync(path.resolve(__dirname, './dist/index.html'), 'utf-8')
-  res.send(html)
+const server = app.listen(8082, () => {
+  console.log(`Express started in ${app.get('env')} mode on http://localhsot:8082`)
 })
-app.listen(8082);
