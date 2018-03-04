@@ -1,24 +1,39 @@
-var http = require("http")
-var fs = require("fs")
+const fs = require('fs');
+const path = require('path');
+const express = require('express');
+const app = express();
+// 模拟数据，api服务
+var appData = require('./data.json');
+var seller = appData.seller;
+var goods = appData.goods;
+var ratings = appData.ratings;
+// api接口
+var apiRoutes = express.Router();
+apiRoutes.get('/seller', function(req, res) {
+  res.json({
+    erron: 0,
+    data: seller
+  })
+});
 
-http.createServer(function(req,res){
-    var path = req.url;
-    console.log("path1: "+path)
-    if(path == "/"){
-        path = "/dist/index.html";
-    }
-    sendFile(res,path);
-}).listen(8082)
+apiRoutes.get('/goods', function(req, res) {
+  res.json({
+    erron: 0,
+    data: goods
+  })
+});
 
-function sendFile(res,path){
-    var path = process.cwd()+path;
-    fs.readFile(path,function(err,stdout,stderr){
-        if(!err){
-            var data = stdout;
-            var type = path.substr(path.lastIndexOf(".")+1,path.length)
-            res.writeHead(200,{'Content-type':"text/"+type});   //在这里设置文件类型，告诉浏览器解析方式
-            res.write(data);
-        }
-        res.end();
-    })
-}
+apiRoutes.get('/ratings', function(req, res) {
+  res.json({
+    erron: 0,
+    data: ratings
+  })
+});
+app.use('/api', apiRoutes);
+app.use(express.static(path.resolve(__dirname, './dist')))
+
+app.get('*', function(req, res) {
+  const html = fs.readFileSync(path.resolve(__dirname, './dist/index.html'), 'utf-8')
+  res.send(html)
+})
+app.listen(8082);
